@@ -23,34 +23,40 @@ var articleOne ={
     
 };
 
-var htmlTemplate =
-  `<html>
-    <head>
-        <title>${title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link href="/ui/style.css" rel="stylesheet" />
-        <style>
-         
-        </style>
-    </head>
-    <body>
-        <div class="container">
-        <h1>${heading}</h1>
-        <div>
-             <a href="/">Home</a>
-        <hr>
-            <h3>${heading}</h3>
-        </div>
-        <div>
-            <h4>${date}</h4>
-        </div>
-        
-        <div>
-           ${content}
-        </div>
-        </div> <!-- container ends here -->
-    </body>
-</html> `;
+function createTemplate(data){
+    var title= data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content= data.content;
+          `<html>
+            <head>
+                <title>${title}</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link href="/ui/style.css" rel="stylesheet" />
+                <style>
+                 
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                <h1>${heading}</h1>
+                <div>
+                     <a href="/">Home</a>
+                <hr>
+                    <h3>${heading}</h3>
+                </div>
+                <div>
+                    <h4>${date}</h4>
+                </div>
+                
+                <div>
+                   ${content}
+                </div>
+                </div> <!-- container ends here -->
+            </body>
+        </html> `;
+        return htmlTemplate;
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));

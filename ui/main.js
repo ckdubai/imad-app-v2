@@ -21,7 +21,7 @@ var request = new XMLHttpRequest();
   if(request.status===200){
         counter = request.responsseText;
         var span = document.getElementById('count');
-        span.innerHtml = counter.toString();
+        span.innerText = counter;
     }
 }
 

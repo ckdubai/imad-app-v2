@@ -9,7 +9,7 @@ var request = new XMLHttpRequest();
  if(request.steadystate === XMLHttpRequest.DONE) {
     
   if(request.status===200){
-        counter = request.responsseText;
+        counter = request.responseText;
         var span = document.getElementById('count');
         span.innerText = counter;
     }

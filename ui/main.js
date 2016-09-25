@@ -10,8 +10,8 @@ var request = new XMLHttpRequest();
     
   if(request.status===200){
         counter = request.responseText;
-        var span = document.getElementById('count');
-        span.innerText = counter;
+        document.getElementById('count').innerText=counter;
+        
     }
 }
 

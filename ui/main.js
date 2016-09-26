@@ -22,3 +22,21 @@ request.open('GET','http://ckdubai.imad.hasura-app.io/counter',true);
 request.send(null);
 
 };
+
+//Submit button 
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('btn_submit');
+
+//Make a request to the server and send names
+submit.onclick = function(){
+    var names= ['name1','name2','name3','name4'];
+    var list = '';
+    for(var i =0; i<name.length; i++) {
+        list+= '<li>'+names[i]+'</li>';
+                                      }
+  var ul = document.getElementById('namelist');
+  ul.innertHTML=list;
+    
+};
+

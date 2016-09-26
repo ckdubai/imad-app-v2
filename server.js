@@ -120,6 +120,14 @@ app.get('/ui/madi.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+var names=[];
+app.get('/submit-name:name',function(req,res) {
+   var name = request.params.name;
+   names.push(name);
+   res.send(JSON.stringfy(names));
+    
+});
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });

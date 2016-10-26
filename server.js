@@ -62,6 +62,8 @@ function createTemplate(data){
     var heading=data.heading;
     var date=data.date;
     var content= data.content;
+    var author_id = data.author_id;
+    var category = data.category;
     var htmlTemplate=
           `<html>
             <head>
@@ -78,12 +80,14 @@ function createTemplate(data){
                 <div>
                      <a href="/">Home</a>
                 <hr>
-                    <h3>${heading}</h3>
+                    <h3>${author_id}</h3>
                 </div>
                 <div>
                     <h4>${date}</h4>
                 </div>
-                
+                 <div>
+                    <h4>${category}</h4>
+                </div>
                 <div>
                    ${content}
                 </div>
@@ -128,7 +132,7 @@ app.get('/submit-name',function(req,res) {
 
 app.get('/articles/:articleName', function (req, res) {
     //var articleName= req.params.articleName;
-    pool.query("SELECT title,heading,date,content FROM article WHERE title="+req.params.articlName,function(err,result){
+    pool.query("SELECT * FROM article WHERE title="+req.params.articlName,function(err,result){
         
         if(err){
             res.status(500).send(err.toString());

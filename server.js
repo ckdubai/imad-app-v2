@@ -83,7 +83,7 @@ function createTemplate(data){
                     <h3>${author_id}</h3>
                 </div>
                 <div>
-                    <h4>${date.toDateString()}</h4>
+                    <h4>${date}</h4>
                 </div>
                  <div>
                     <h4>${category}</h4>

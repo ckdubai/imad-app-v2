@@ -228,6 +228,14 @@ app.get('/ui/css/bootstrap.min.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'bootstrap.min.css'));
 });
 
+app.get('/ui/css/bootstrap.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/css', 'bootstrap.css'));
+});
+
+app.get('/ui/css/bootstrap-responsive.min.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/css', 'bootstrap-responsive.css'));
+});
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });

@@ -224,8 +224,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/css/bootstrap.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/css', 'bootstrap.css'));
+app.get('/ui/css/bootstrap.min.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/css', 'bootstrap.min.css'));
 });
 
 app.get('/ui/25605.jpg', function (req, res) {

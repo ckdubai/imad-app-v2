@@ -228,8 +228,8 @@ app.get('/ui/css/bootstrap.min.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'bootstrap.min.css'));
 });
 
-app.get('/ui/25605.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', '25605.jpg'));
+app.get('/ui/madi.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 

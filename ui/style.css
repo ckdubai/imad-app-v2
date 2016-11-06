@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: sans-serif;
     
     margin-top: 75px;
@@ -26,5 +26,8 @@ body {
     font-family: sans-serif;
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
+
+/* CSS used here will be applied after bootstrap.css */
+#formLogin{padding: 15px; min-width:300px;}
             

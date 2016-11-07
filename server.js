@@ -153,6 +153,9 @@ app.post('/login',function(req,res){
                           var salt = dbString.split('$')[1];
                           var hashedPassword = hash(password,salt);
                           if(hashedPassword === dbString) {
+                          //set session here
+                          req.session.auth ={userId: result.rows[0].id};
+                          
                           res.send('credentials are correct');
                           } else {
                               
@@ -164,6 +167,14 @@ app.post('/login',function(req,res){
               }
    });
     
+});
+
+app.get('/login-check',function(req,res){
+    if(req.session && req.session.auth && req.session.auth.userId){
+        res.send('You are logged-in: '+ req.session.auth.userId.toString());
+           } else {
+               res.send('You are not logged in');
+           }
 });
 
 var pool= new Pool(config);

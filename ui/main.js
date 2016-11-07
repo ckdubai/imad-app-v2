@@ -64,6 +64,7 @@ console.log(username);
 console.log(password);
 //request.open('GET','http://ckdubai.imad.hasura-app.io/submit-name?name='+name,true);
 request.open('POST','http://ckdubai.imad.hasura-app.io/login',true);
+request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username,password:password}));
 
 };

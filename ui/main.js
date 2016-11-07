@@ -1,4 +1,4 @@
- var button = document.getElementById('counter');
+ /*var button = document.getElementById('counter');
  
  button.onclick = function (){
 // create a request
@@ -21,9 +21,9 @@ var request = new XMLHttpRequest();
 request.open('GET','http://ckdubai.imad.hasura-app.io/counter',true);
 request.send(null);
 
-};
+};*/
 
-//Submit button 
+//Submit button username
 
 var submit = document.getElementById('btn_submit');
 

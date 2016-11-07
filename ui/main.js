@@ -49,9 +49,12 @@ var request = new XMLHttpRequest();
   }
   }  
 };
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
-request.open('GET','http://ckdubai.imad.hasura-app.io/submit-name?name='+name,true);
-request.send(null);
+var username = document.getElementById('username').value;
+var password = document.getElementById('password').value;
+console.log(username);
+console.log(password);
+//request.open('GET','http://ckdubai.imad.hasura-app.io/submit-name?name='+name,true);
+request.open('POST','http://ckdubai.imad.hasura-app.io/login',true);
+request.send(JSON.stringify({username:username,password:password}));
 
 };

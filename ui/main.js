@@ -39,15 +39,24 @@ var request = new XMLHttpRequest();
       
 //Make a request to the server and send names
 
-    var names =request.responseText;
+    /*var names =request.responseText;
     names = JSON.parse(names);
     var list = '';
     for(var i=0; i<names.length; i++) {
         list+= '<li>' + names[i] + '</li>';
                                       }
-  document.getElementById('namelist').innerHTML=list;
-  }
-  }  
+  document.getElementById('namelist').innerHTML=list;*/
+   console.log('user logged in');
+   alert('logged in successfully');
+   }//200 status ends here
+   else if(request.status===403){
+       alert('username/password is incorrect');
+   }
+   else if(request.status=== 500){
+       alert('something went wrong on the server');
+       
+   }
+  }//ready state   
 };
 var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;

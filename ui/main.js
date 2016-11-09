@@ -79,7 +79,7 @@ articles.click = function () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var artic = document.getElementById('dis');
-            alert('yyy');
+            
             if (request.status === 200) {
                 var content = '<ul>';
                 var articleData = JSON.parse(this.responseText);

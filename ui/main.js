@@ -78,7 +78,7 @@ articles.click = function () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var articles = document.getElementById('dis');
+            var artic = document.getElementById('dis');
             if (request.status === 200) {
                 var content = '<ul>';
                 var articleData = JSON.parse(this.responseText);
@@ -88,7 +88,7 @@ articles.click = function () {
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
                 content += "</ul>";
-                articles.innerHTML = content;
+                s.innerHTML = content;
             } else {
                 articles.innerHTML('Oops! Could not load all articles!');
             }

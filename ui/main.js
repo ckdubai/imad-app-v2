@@ -70,7 +70,9 @@ request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username,password:password}));
 
 };
-function loadArticles () {
+
+var articles = document.getElementById('articles');
+articles.click = function () {
         // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
@@ -84,10 +86,10 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "</ul>"
+                content += "</ul>";
                 articles.innerHTML = content;
             } else {
-                articles.innerHTML('Oops! Could not load all articles!')
+                articles.innerHTML('Oops! Could not load all articles!');
             }
         }
     };

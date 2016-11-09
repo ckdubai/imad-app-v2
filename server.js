@@ -189,9 +189,9 @@ app.get('/get-articles', function (req, res) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
-          var articleData = result.rows[0];
-                res.send(createTemplate(articleData));
-          //res.send(JSON.stringify(result.rows));
+          //var articleData = result.rows[0];
+                //res.send(createTemplate(articleData));
+          res.send(JSON.stringify(result.rows));
       }
    });
 });

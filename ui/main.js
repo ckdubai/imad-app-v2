@@ -98,4 +98,4 @@ articles.click = function () {
     
     request.open('GET', '/get-articles', true);
     request.send(null);
-}
+};

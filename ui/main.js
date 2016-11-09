@@ -88,9 +88,9 @@ articles.click = function () {
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
                 content += "</ul>";
-                s.innerHTML = content;
+                dis.innerHTML = content;
             } else {
-                articles.innerHTML('Oops! Could not load all articles!');
+                innerHTML('Oops! Could not load all articles!');
             }
         }
     };

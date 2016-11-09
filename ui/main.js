@@ -74,6 +74,7 @@ request.send(JSON.stringify({username:username,password:password}));
 var articles = document.getElementById('articles');
 
 articles.click = function () {
+    alert("ggggg");
         // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {

@@ -128,6 +128,7 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
+                document.getElementById("article_link").style.display = "show";
             } else {
                 loadLoginForm();
             }
@@ -171,5 +172,5 @@ articles.onclick = function () {
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
-document.getElementById('article_link').disabled=true;
+
 document.getElementById("article_link").style.display = "none";

@@ -33,11 +33,13 @@ var loginHtml = `<div class="form-group">
                     <button type="submit" id="reg_submit" class="btn btn-default">Register</button>`;
     document.getElementById('login_form').innerHTML = loginHtml;
     
-
+var articles = document.getElementById('articles');
+articles.visible=false;
 
 //login Submit button username
 
 var submit = document.getElementById('btn_submit');
+
 
 submit.onclick = function(){
 // create a request

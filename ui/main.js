@@ -171,5 +171,5 @@ articles.onclick = function () {
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
-var articles = document.getElementById('articles');
-articles.disabled=true;
+var article_link = document.getElementById('article_link');
+article_link.disabled=true;

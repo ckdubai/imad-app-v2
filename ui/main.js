@@ -67,6 +67,7 @@ var request = new XMLHttpRequest();
        alert('something went wrong on the server');
        
    }
+   loadLogin();
   }//ready state   
 };
 var username = document.getElementById('username').value;

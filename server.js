@@ -186,7 +186,7 @@ app.get('/login-check',function(req,res){
 
 app.get('/logout',function(req,res){
    delete req.session.auth;
-   res.send('logged out');
+    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
 app.get('/get-articles', function (req, res) {

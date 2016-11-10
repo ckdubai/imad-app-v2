@@ -34,7 +34,7 @@ var loginHtml = `<div class="form-group">
     document.getElementById('login_form').innerHTML = loginHtml;
     
 var articles = document.getElementById('articles');
-//articles.visible=false;
+articles.disabled=true;
 
 //login Submit button username
 

@@ -116,9 +116,8 @@ request.send(JSON.stringify({username:username,password:password}));
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_form');
     loginArea.innerHTML = `
-        <h3> Hi <i>${username}</i></h3>
-        <a href="/logout">Logout</a>
-    `;
+        <h5> Hi <i>${username}</i></h5>
+        <a href="/logout">Logout</a>`;
 }
 
 function loadLogin () {

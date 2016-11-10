@@ -135,7 +135,7 @@ function loadLogin () {
         }
     };
     
-    request.open('GET', '/login-check', true);
+    request.open('GET','/login-check', true);
     request.send(null);
 }
 

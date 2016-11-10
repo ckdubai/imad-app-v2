@@ -23,20 +23,29 @@ request.send(null);
 
 };*/
 
-//Submit button username
+var loginHtml = `
+        <h3>Login/Register to unlock awesome features</h3>
+        <input type="text" id="username" placeholder="username" />
+        <input type="password" id="password" />
+        <br/><br/>
+        <input type="submit" id="login_btn" value="Login" />
+        <input type="submit" id="register_btn" value="Register" />
+        `;
+    document.getElementById('login_form').innerHTML = loginHtml;
+    
+
+
+//login Submit button username
 
 var submit = document.getElementById('btn_submit');
 
 submit.onclick = function(){
 // create a request
 var request = new XMLHttpRequest();
-
 //Capture the response and store it in a variable
  request.onreadystatechange = function() {
  if(request.readyState === XMLHttpRequest.DONE) {
-    
-  if(request.status===200){
-      
+   if(request.status===200){
 //Make a request to the server and send names
 
     /*var names =request.responseText;
@@ -48,7 +57,6 @@ var request = new XMLHttpRequest();
   document.getElementById('namelist').innerHTML=list;*/
    console.log('user logged in');
    alert('logged in successfully');
-  
    
    }//200 status ends here
    else if(request.status===403){
@@ -70,6 +78,10 @@ request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username,password:password}));
 
 };
+
+
+
+
 
 var articles = document.getElementById('articles');
 
@@ -100,3 +112,20 @@ articles.onclick = function () {
     request.open('GET', '/get-articles', true);
     request.send(null);
 };
+
+function loadLogin () {
+    // Check if the user is already logged in
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadLoggedInUser(this.responseText);
+            } else {
+                loadLoginForm();
+            }
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+}

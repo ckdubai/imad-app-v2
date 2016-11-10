@@ -82,7 +82,7 @@ request.send(JSON.stringify({username:username,password:password}));
 
 };
 
-  var register = document.getElementById('register_btn');
+  var register = document.getElementById('reg_submit');
     register.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();

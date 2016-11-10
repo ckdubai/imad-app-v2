@@ -172,3 +172,4 @@ articles.onclick = function () {
 // The first thing to do is to check if the user is logged in!
 loadLogin();
 document.getElementById('article_link').disabled=true;
+document.getElementById("article_link").style.display = "none";

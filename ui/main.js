@@ -33,8 +33,7 @@ var loginHtml = `<div class="form-group">
                     <button type="submit" id="reg_submit" class="btn btn-default">Register</button>`;
     document.getElementById('login_form').innerHTML = loginHtml;
     
-var articles = document.getElementById('articles');
-articles.disabled=true;
+
 
 //login Submit button username
 
@@ -172,3 +171,5 @@ articles.onclick = function () {
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
+var articles = document.getElementById('articles');
+articles.disabled=true;

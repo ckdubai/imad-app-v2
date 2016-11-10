@@ -115,6 +115,32 @@ request.send(JSON.stringify({username:username,password:password}));
 
 }
 
+function loadLoggedInUser (username) {
+    var loginArea = document.getElementById('login_form');
+    loginArea.innerHTML = `
+        <h3> Hi <i>${username}</i></h3>
+        <a href="/logout">Logout</a>
+    `;
+}
+
+function loadLogin () {
+    // Check if the user is already logged in
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadLoggedInUser(this.responseText);
+            } else {
+                loadLoginForm();
+            }
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+}
+
+
 var articles = document.getElementById('articles');
 
 articles.onclick = function () {
@@ -145,19 +171,3 @@ articles.onclick = function () {
     request.send(null);
 };
 
-function loadLogin () {
-    // Check if the user is already logged in
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
-            } else {
-                loadLoginForm();
-            }
-        }
-    };
-    
-    request.open('GET', '/check-login', true);
-    request.send(null);
-}

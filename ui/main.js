@@ -23,14 +23,15 @@ request.send(null);
 
 };*/
 
-var loginHtml = `
-        <h3>Login/Register to unlock awesome features</h3>
-        <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" />
-        <br/><br/>
-        <input type="submit" id="login_btn" value="Login" />
-        <input type="submit" id="register_btn" value="Register" />
-        `;
+var loginHtml = `  <div id="login_form" class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" id="btn_submit" class="btn btn-default">Sign In</button>
+                </div>`;
     document.getElementById('login_form').innerHTML = loginHtml;
     
 

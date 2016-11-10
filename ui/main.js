@@ -31,6 +31,7 @@ var loginHtml = `  <div id="login_form" class="navbar-form navbar-right">
                         <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                     </div>
                     <button type="submit" id="btn_submit" class="btn btn-default">Sign In</button>
+                    <button type="submit" id="reg_submit" class="btn btn-default">Register</button>
                 </div>`;
     document.getElementById('login_form').innerHTML = loginHtml;
     

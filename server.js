@@ -99,7 +99,15 @@ function createTemplate(data){
                 <div>
                    ${content}
                 </div>
+                <hr/>
+              <h4>Comments</h4>
+              <div id="comment_form">
+              </div>
+              <div id="comments">
+                <center>Loading comments...</center>
+              </div>
                 </div> <!-- container ends here -->
+                <script type="text/javascript" src="/ui/article.js"></script>
             </body>
         </html> `;
         return htmlTemplate;

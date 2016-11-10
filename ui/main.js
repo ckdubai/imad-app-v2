@@ -23,8 +23,7 @@ request.send(null);
 
 };*/
 function loadLoginForm () {
-var loginHtml = `  <div id="login_form" class="navbar-form navbar-right">
-                    <div class="form-group">
+var loginHtml = `<div class="form-group">
                         <input type="text" class="form-control" name="username" id="username" placeholder="Username">
                     </div>
                     <div class="form-group">

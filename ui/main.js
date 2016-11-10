@@ -30,8 +30,7 @@ var loginHtml = `<div class="form-group">
                         <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                     </div>
                     <button type="submit" id="btn_submit" class="btn btn-default">Sign In</button>
-                    <button type="submit" id="reg_submit" class="btn btn-default">Register</button>
-                </div>`;
+                    <button type="submit" id="reg_submit" class="btn btn-default">Register</button>`;
     document.getElementById('login_form').innerHTML = loginHtml;
     
 

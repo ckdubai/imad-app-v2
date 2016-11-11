@@ -117,9 +117,9 @@ request.send(JSON.stringify({username:username,password:password}));
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_form');
     loginArea.innerHTML = `
-        <div> Hi <i>${username}</i></div>
-        <a href="/logout">Logout</a>`;
-}
+        <div> Hi <i>${username}</i>
+        <a href="/logout">Logout</a> </div>`;
+}       
 
 function loadLogin () {
     // Check if the user is already logged in

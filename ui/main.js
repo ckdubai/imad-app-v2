@@ -57,7 +57,7 @@ var request = new XMLHttpRequest();
                                       }
   document.getElementById('namelist').innerHTML=list;*/
    console.log('user logged in');
-   alert('logged in successfully');
+   
    
    }//200 status ends here
    else if(request.status===403){

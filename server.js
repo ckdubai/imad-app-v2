@@ -78,10 +78,8 @@ function createTemplate(data){
                 <title>${title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link href="/ui/style.css" rel="stylesheet" />
-                <style>
-                 
-                </style>
-            </head>
+                <link href="/ui/css/bootstrap.min.css" rel="stylesheet" />
+                </head>
             <body>
                 <div class="container">
                 <h1>${heading}</h1>

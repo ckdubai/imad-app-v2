@@ -82,22 +82,24 @@ function createTemplate(data){
                 </head>
             <body>
                 <div class="container">
-                <a href="/">Home</a>
-                <div>
-                     <h1>${heading}</h1>
-                      </div>
-                <hr>
-                    
-                <div>
-                    <h4>${date.toDateString()}</h4>
-                </div>
-                 <div>
-                    <h4>Category:${category}</h4>
-                </div>
-                <div>
-                   ${content}
-                </div>
-                <hr/>
+                      <a href="/">Home</a>
+                        <div class="col-md-12">
+                                  <h1>${heading}</h1>
+                                    <p>${content}</p>    
+                                <div>
+                                   <span class="badge">${date.toDateString()}</span><div class="pull-right"><span class="label label-default">alice</span> <span class="label label-primary">story</span> <span class="label label-success">blog</span> <span class="label label-info">personal</span> <span class="label label-warning">Warning</span>
+                                   <span class="label label-danger">Danger</span>
+                                </div>    
+                
+                        </div>    
+    
+   
+
+        
+    
+    <hr>
+                
+                
               <h4>Comments</h4>
               <div id="comment_form">
               </div>

@@ -80,14 +80,11 @@ function loadComments () {
                     content += `<div class="comments comments-list">
                     <div class="media">
                            <p class="pull-right"><small>${time.toLocaleTimeString()} on ${time.toLocaleDateString()}</small></p>
-                           
-                            <div class="media-body">
-                                
-                              <h4 class="media-heading user_name">${commentsData[i].username}</h4>
-                             ${escapeHTML(commentsData[i].comment)}
-                              
-                              
-                            </div>
+                               <div class="media-body">
+                                 <h4 class="media-heading user_name">${commentsData[i].username}</h4>
+                                  ${escapeHTML(commentsData[i].comment)}
+                           </div>
+                           <p></p>
                           </div>`;
                 }
                 comments.innerHTML = content;

@@ -155,10 +155,10 @@ articles.onclick = function () {
             var artic = document.getElementById('dis');
             
             if (request.status === 200) {
-                var content = '<ul>';
+                var content = '<ul class="list-group">';
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                    content += `<li>
+                    content += `<li class="list-group-item">
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }

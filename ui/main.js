@@ -111,6 +111,9 @@ request.send(JSON.stringify({username:username,password:password}));
         request.send(JSON.stringify({username: username, password: password}));  
         register.value = 'Registering...';
         }
+        else
+        { alert("fields cannot be empty");
+        }
     };
 
 }

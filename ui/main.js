@@ -133,6 +133,7 @@ function loadLogin () {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
                 document.getElementById("article_link").style.display = "block";
+                document.getElementById("info").style.display = "none";
             } else {
                 loadLoginForm();
             }

@@ -325,8 +325,8 @@ app.get('/ui/css/bootstrap-theme.min.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'bootstrap-theme.min.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/25605.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', '25605.jpg'));
 });
 
 

@@ -207,4 +207,4 @@ function loadArticles () {
 loadLogin();
 
 document.getElementById("article_link").style.display = "none";
-loadArticles();
+//loadArticles();

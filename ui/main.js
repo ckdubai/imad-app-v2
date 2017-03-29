@@ -154,7 +154,7 @@ articles.onclick = function () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var artic = document.getElementById('dis');
-            
+             alert("ok");
             if (request.status === 200) {
                 var content = '<ul class="list-group">';
                 var articleData = JSON.parse(this.responseText);

@@ -163,6 +163,7 @@ articles.onclick = function () {
                     content += `<li class="list-group-item">
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
+                    alert("123");
                 }
                 content += "</ul>";
                 artic.innerHTML = content;

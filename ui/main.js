@@ -191,7 +191,7 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "</ul>";
+                content += "hello</ul>";
                 artic.innerHTML = content;
             } else {
                 artic.innerHTML('Oops! Could not load all articles!');

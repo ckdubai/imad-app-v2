@@ -156,7 +156,7 @@ articles.onclick = function () {
             var artic = document.getElementById('dis');
             
             if (request.status === 200) 
-            {  alert("ok");
+            {  
                 var content = '<ul class="list-group">';
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
@@ -170,9 +170,9 @@ articles.onclick = function () {
                 innerHTML('Oops! Could not load all articles!');
             }
         }
-    };
+    }; 
     
-    request.open('GET', '/get-articles', true);
+    request.open('GET','/get-articles', true);
     request.send(null);
 };
 

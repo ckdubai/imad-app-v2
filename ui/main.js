@@ -179,11 +179,11 @@ articles.onclick = function () {
 
 function loadArticles () {
         // Check if the user is already logged in
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
+    
+    
+       
             var artic = document.getElementById('dis');
-            if (request.status === 200) {
+           
                 var content = '<ul>';
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
@@ -191,13 +191,11 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "</ul>"
+                content += "</ul>";
                 artic.innerHTML = content;
-            } else {
-                artic.innerHTML('Oops! Could not load all articles!')
-            }
-        }
-    };
+             
+       
+   
     
     request.open('GET', '/get-articles', true);
     request.send(null);

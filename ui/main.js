@@ -191,7 +191,7 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "hello</ul>";
+                content += "</ul>";
                 artic.innerHTML = content;
             } else {
                 artic.innerHTML('Oops! Could not load all articles!');
@@ -206,5 +206,5 @@ function loadArticles () {
 // The first thing to do is to check if the user is logged in!
 loadLogin();
 
-//document.getElementById("article_link").style.display = "none";
+document.getElementById("article_link").style.display = "none";
 loadArticles();

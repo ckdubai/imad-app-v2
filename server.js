@@ -147,7 +147,8 @@ app.post('/login',function(req,res){
            res.status(500).send(err.toString());
               } else {
                   if(result.rows.length === 0) {
-                      res.status(403).send('username/password is invalid');
+                      //res.status(403).send('username/password is invalid');
+                      res.status(403).send(JSON.stringify({"error":"Username/Password is incorrect"}));
                       } else
                       {
                           var dbString = result.rows[0].password;
@@ -156,11 +157,11 @@ app.post('/login',function(req,res){
                           if(hashedPassword === dbString) {
                           //set session here
                           req.session.auth ={userId: result.rows[0].id};
-                          
-                          res.send('credentials are correct');
+                          res.send(JSON.stringify({"message":"You have logged in successfully"}));
+                          //res.send('credentials are correct');
                           } else {
-                              
-                              res.status(403).send('username/password is invalid');
+                              res.status(403).send(JSON.stringify({"error":"Username/Password is incorrect"}));
+                              //res.status(403).send('username/password is invalid');
                           }
                       }
                   

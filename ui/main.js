@@ -57,6 +57,7 @@ var request = new XMLHttpRequest();
                                       }
   document.getElementById('namelist').innerHTML=list;*/
    console.log('user logged in');
+   submit.value = 'Sucess!';
    
    
    }//200 status ends here
@@ -75,9 +76,10 @@ var password = document.getElementById('password').value;
 console.log(username);
 console.log(password);
 //request.open('GET','http://ckdubai.imad.hasura-app.io/submit-name?name='+name,true);
-request.open('POST','http://ckdubai.imad.hasura-app.io/login',true);
+request.open('POST','/login',true);
 request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username,password:password}));
+submit.value = 'Logging in...';
 
 };
 
